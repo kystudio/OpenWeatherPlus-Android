@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.heweather.owp">
 
     <!-- 用于进行网络定位 -->
@@ -31,7 +32,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity
             android:name=".view.activity.MainActivity"
             android:launchMode="singleInstance" />
@@ -47,9 +50,10 @@
         <!-- 设置key -->
         <meta-data
             android:name="com.amap.api.v2.apikey"
-            android:value="高德的key" />
+            android:value="4a4c976d040196b723deac7137e84a74" />
 
         <service android:name="com.amap.api.location.APSService" />
+
         <service
             android:name=".service.LocationService"
             android:enabled="true"
@@ -59,7 +63,7 @@
         <activity android:name=".view.activity.ControlCityActivity" />
         <activity android:name=".view.activity.AboutActivity" />
         <activity android:name=".view.activity.BaseActivity" />
-        <activity android:name=".view.activity.SearchActivity"/>
+        <activity android:name=".view.activity.SearchActivity" />
     </application>
 
 </manifest>
